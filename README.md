@@ -36,12 +36,12 @@ datadog:
   install_only: false # default: true
 ```
 
-`node[:datadog][:api_key]` is your datadog-agent API Key.
-`node[:datadog][:install_only]` is an install option. If you want to install agent and don't start agent, please set this option `true`.
+`node[:datadog][:api_key]` is your datadog-agent API Key.  
+`node[:datadog][:install_only]` is an install option. If you want to install agent and don't start agent, please set this option`true`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/itamae-plugin-recipe-datadog. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/takanamito/itamae-plugin-recipe-datadog. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
