@@ -18,6 +18,6 @@ execute 'install datadog-agent' do
   options['DD_API_KEY'] = node[:datadog][:api_key]
   options['DD_INSTALL_ONLY'] = 'true' if node[:datadog][:install_only]
   options['DD_UPGRADE'] = 'true' if node[:datadog][:upgrade]
-  option_str = options.map { |k, v| "#{k}=#{v}" }.joins(' ')
+  option_str = options.map { |k, v| "#{k}=#{v}" }.join(' ')
   command "#{option_str} ./install_script.sh"
 end
