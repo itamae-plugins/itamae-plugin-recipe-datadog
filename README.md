@@ -34,10 +34,15 @@ include_recipe "datadog::install"
 datadog:
   api_key: xxxxxx
   install_only: false # default: true
+  upgrade: true # default: false
 ```
 
-`node[:datadog][:api_key]` is your datadog-agent API Key.  
-`node[:datadog][:install_only]` is an install option. If you want to install agent and don't start agent, please set this option`true`.
+- `node[:datadog][:api_key]`
+  - Your datadog-agent API Key.
+- `node[:datadog][:install_only]`
+  - An install option. If you want to install agent and don't start agent, please set this option`true`.
+- `node[:datadog][:upgrade]`
+  - An install option. Upgrade datadog-agent version automatically.
 
 ## Contributing
 
