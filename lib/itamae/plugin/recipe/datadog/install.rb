@@ -6,11 +6,12 @@ node.reverse_merge!(
 )
 
 execute 'download install script' do
-  command 'wget https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh'
+  command 'wget https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh -O /tmp/install_script.sh'
 end
 
-execute "change install script's permission" do
-  command 'chmod 755 install_script.sh'
+file '/tmp/install_script.sh' do
+  action :edit
+  mode '0755'
 end
 
 execute 'install datadog-agent' do
@@ -19,5 +20,5 @@ execute 'install datadog-agent' do
   options['DD_INSTALL_ONLY'] = 'true' if node[:datadog][:install_only]
   options['DD_UPGRADE'] = 'true' if node[:datadog][:upgrade]
   option_str = options.map { |k, v| "#{k}=#{v}" }.join(' ')
-  command "#{option_str} ./install_script.sh"
+  command "#{option_str} /tmp/install_script.sh"
 end
