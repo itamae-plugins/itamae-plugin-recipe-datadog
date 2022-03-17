@@ -27,4 +27,10 @@ execute 'install datadog-agent' do
   options['DD_UPGRADE'] = 'true' if node[:datadog][:upgrade]
   option_str = options.map { |k, v| "#{k}=#{v}" }.join(' ')
   command "#{option_str} /tmp/install_script.sh"
+
+  # If upgrade is enabled, always run `install_script.sh`
+  # If upgrade is disabled, run `install_script.sh` only when datadog isn't installed
+  unless node[:datadog][:upgrade]
+    not_if 'ls /etc/datadog-agent/datadog.yaml'
+  end
 end
