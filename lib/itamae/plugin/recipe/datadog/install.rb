@@ -7,6 +7,12 @@ node.reverse_merge!(
 
 execute 'download install script' do
   command 'wget https://raw.githubusercontent.com/DataDog/datadog-agent/main/cmd/agent/install_script.sh -O /tmp/install_script.sh'
+
+  # If upgrade is enabled, always download the latest install_script.sh
+  # If upgrade is disabled, download only when `/tmp/install_script.sh` doesn't exist
+  unless node[:datadog][:upgrade]
+    not_if 'ls /tmp/install_script.sh'
+  end
 end
 
 file '/tmp/install_script.sh' do
