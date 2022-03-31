@@ -33,6 +33,7 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+          rubygems: latest
 
       - name: Cache vendor/bundle
         uses: actions/cache@v1
