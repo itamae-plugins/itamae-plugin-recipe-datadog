@@ -5,6 +5,8 @@ node.reverse_merge!(
   }
 )
 
+package 'wget'
+
 execute 'download install script' do
   command 'wget https://raw.githubusercontent.com/DataDog/datadog-agent/main/cmd/agent/install_script.sh -O /tmp/install_script.sh'
 
