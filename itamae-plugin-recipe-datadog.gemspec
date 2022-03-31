@@ -6,7 +6,7 @@ require 'itamae/plugin/recipe/datadog/version'
 Gem::Specification.new do |spec|
   spec.name          = "itamae-plugin-recipe-datadog"
   spec.version       = Itamae::Plugin::Recipe::Datadog::VERSION
-  spec.authors       = ["Takahiro Kiso (takanamito)", "sue445"]
+  spec.authors       = ["Takahiro Kiso (takanamito)", "sue445", "Speee, Inc."]
   spec.email         = ["t.kiso0928@gmail.com", "sue445@sue445.net"]
 
   spec.summary       = %q{Itamae plugin to install datadog-agent.}
