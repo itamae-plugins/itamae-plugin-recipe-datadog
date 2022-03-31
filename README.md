@@ -2,6 +2,9 @@
 
 [Itamae](https://github.com/ryotarai/itamae) plugin to install Datadog Agent.
 
+[![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-datadog.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-datadog)
+[![test](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/actions/workflows/test.yml/badge.svg)](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/actions/workflows/test.yml)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,7 +24,7 @@ Or install it yourself as:
 ## Usage
 
 ### Recipe
-```
+```ruby
 # In your recipe
 include_recipe "datadog::install"
 ```
@@ -29,7 +32,7 @@ include_recipe "datadog::install"
 ### Node
 `$ itamae -y node.yml`
 
-```
+```yaml
 # node.yml
 datadog:
   api_key: xxxxxx
@@ -46,7 +49,7 @@ datadog:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/speee/itamae-plugin-recipe-datadog. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/itamae-plugins/itamae-plugin-recipe-datadog. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
