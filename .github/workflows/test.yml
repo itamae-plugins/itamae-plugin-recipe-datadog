@@ -32,6 +32,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
 
       - name: Cache vendor/bundle
         uses: actions/cache@v1
@@ -45,8 +46,8 @@ jobs:
       - name: bundle update
         run: |
           set -xe
-          bundle config path vendor/bundle
-          bundle config set --local jobs $(nproc)
+          bundle config --local path $PWD/vendor/bundle
+          bundle config --local jobs $(nproc)
           bundle update --retry 3
 
       - name: Run Itamae
