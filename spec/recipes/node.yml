@@ -1,0 +1,4 @@
+datadog:
+  api_key: xxxxxx
+  install_only: true
+  upgrade: false
