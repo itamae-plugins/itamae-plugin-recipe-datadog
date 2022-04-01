@@ -25,6 +25,7 @@ jobs:
         image:
           - debian:buster
           - amazonlinux:2
+          - ubuntu:focal
 
     steps:
       - uses: actions/checkout@v2
