@@ -2,3 +2,4 @@ datadog:
   api_key: api_key_1
   install_only: true
   upgrade: false
+  # agent_major_version: 7
