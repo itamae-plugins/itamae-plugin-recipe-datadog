@@ -1,7 +1,7 @@
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
-RSpec::Core::RakeTask.new(:spec)
+RSpec::Core::RakeTask.new(:serverspec)
 
 ENV["DOCKER_IMAGE"] = "itamae-plugin:latest"
 ENV["IMAGE"] ||= "debian:buster"
@@ -12,6 +12,6 @@ task :itamae do
 end
 
 desc "Run test"
-task :test => %i(itamae spec)
+task :test => %i(itamae serverspec)
 
 task default: :test

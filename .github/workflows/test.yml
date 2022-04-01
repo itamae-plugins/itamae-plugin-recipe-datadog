@@ -55,7 +55,7 @@ jobs:
         env:
           IMAGE: ${{ matrix.image }}
 
-      - run: bundle exec rake spec
+      - run: bundle exec rake serverspec
 
       - name: Slack Notification (not success)
         uses: lazy-actions/slatify@master
