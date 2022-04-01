@@ -51,19 +51,11 @@ jobs:
           bundle config --local jobs $(nproc)
           bundle update --retry 3
 
-      - name: Run Itamae
-        run: |
-          set -xe
-          bundle exec itamae docker --node-yaml=spec/recipes/node.yml spec/recipes/install.rb --image=$IMAGE --tag itamae-plugin:latest
+      - run: bundle exec rake itamae
         env:
           IMAGE: ${{ matrix.image }}
 
-      - name: Run Serverspec
-        run: |
-          set -xe
-          bundle exec rspec
-        env:
-          DOCKER_IMAGE: itamae-plugin:latest
+      - run: bundle exec rake spec
 
       - name: Slack Notification (not success)
         uses: lazy-actions/slatify@master
