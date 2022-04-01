@@ -70,6 +70,12 @@ jobs:
           DATADOG_UPGRADE: "true"
           DD_API_KEY: api_key_3
 
+      - name: Run test (DD_AGENT_MAJOR_VERSION is specified)
+        run: bundle exec rake test
+        env:
+          IMAGE: ${{ matrix.image }}
+          DD_AGENT_MAJOR_VERSION: 7
+
       - name: Slack Notification (not success)
         uses: lazy-actions/slatify@master
         if: "! success()"

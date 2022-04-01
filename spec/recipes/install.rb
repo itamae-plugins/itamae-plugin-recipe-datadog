@@ -6,6 +6,10 @@ if ENV["DD_API_KEY"]
   node[:datadog][:api_key] = ENV["DD_API_KEY"]
 end
 
+if ENV["DD_AGENT_MAJOR_VERSION"]
+  node[:datadog][:agent_major_version] = ENV["DD_AGENT_MAJOR_VERSION"].to_i
+end
+
 case node[:platform]
 when "debian", "ubuntu"
   execute "apt-get update"

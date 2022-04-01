@@ -38,6 +38,7 @@ datadog:
   api_key: xxxxxx
   install_only: false # default: true
   upgrade: true # default: false
+  agent_major_version: 7 # default: none
 ```
 
 - `node[:datadog][:api_key]`
@@ -46,6 +47,10 @@ datadog:
   - An install option. If you want to install agent and don't start agent, please set this option`true`.
 - `node[:datadog][:upgrade]`
   - An install option. Upgrade datadog-agent version automatically.
+- `node[:datadog][:agent_major_version]`
+  - Whether to install any major version of the agent. (e.g. `7`)
+  - default is none. installed with datadog-agent v6
+  - see https://docs.datadoghq.com/agent/versions/upgrade_to_agent_v7
 
 ## Contributing
 

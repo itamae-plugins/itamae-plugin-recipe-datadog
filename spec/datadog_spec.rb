@@ -19,3 +19,14 @@ context "When datadog-agent is installed" do
     end
   end
 end
+
+context "When DD_AGENT_MAJOR_VERSION is specified" do
+  context "DD_AGENT_MAJOR_VERSION is 7", if: ENV["DD_AGENT_MAJOR_VERSION"] == "7" do
+    describe package("datadog-agent") do
+      it "installed with v7" do
+        version = subject.version.version
+        expect(version).to match /^7\./
+      end
+    end
+  end
+end
