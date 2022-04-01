@@ -39,6 +39,10 @@ datadog:
   install_only: false # default: true
   upgrade: true # default: false
   agent_major_version: 7 # default: none
+
+  integrations: # default: {}
+    datadog-puma: 1.1.0 # Install specified version (recommended)
+    datadog-vsphere: # Install latest version
 ```
 
 - `node[:datadog][:api_key]`
@@ -51,6 +55,29 @@ datadog:
   - Whether to install any major version of the agent. (e.g. `7`)
   - default is none. installed with datadog-agent v6
   - see https://docs.datadoghq.com/agent/versions/upgrade_to_agent_v7
+- `node[:datadog][:integrations]`
+  - Install integrations
+  - see https://docs.datadoghq.com/agent/guide/integration-management/
+  - key: integration name (e.g. `datadog-puma`)
+  - value: integration version (e.g. `1.1.0`)
+
+## Definitions
+### install_datadog_agent_integration
+Install datadog-agent integration
+
+Usage
+
+```ruby
+include_recipe "datadog::install_datadog_agent_integration"
+
+# Install specified version (recommended)
+install_datadog_agent_integration "datadog-puma" do
+  version "1.1.0"
+end
+
+# Install latest version
+install_datadog_agent_integration "datadog-puma"
+```
 
 ## Contributing
 

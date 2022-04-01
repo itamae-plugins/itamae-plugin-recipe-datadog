@@ -3,3 +3,7 @@ datadog:
   install_only: true
   upgrade: false
   # agent_major_version: 7
+
+  integrations:
+    datadog-puma: 1.1.0
+    datadog-vsphere:
