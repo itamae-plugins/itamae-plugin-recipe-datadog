@@ -51,11 +51,24 @@ jobs:
           bundle config --local jobs $(nproc)
           bundle update --retry 3
 
-      - run: bundle exec rake itamae
+      - name: Run test (1st installation)
+        run: bundle exec rake test
         env:
           IMAGE: ${{ matrix.image }}
 
-      - run: bundle exec rake serverspec
+      - name: Run test (installation is skipped)
+        run: bundle exec rake test
+        env:
+          IMAGE: itamae-plugin:latest
+          DATADOG_UPGRADE: "false"
+          DD_API_KEY: api_key_2
+
+      - name: Run test (datadog-agent is upgraded)
+        run: bundle exec rake test
+        env:
+          IMAGE: itamae-plugin:latest
+          DATADOG_UPGRADE: "true"
+          DD_API_KEY: api_key_3
 
       - name: Slack Notification (not success)
         uses: lazy-actions/slatify@master

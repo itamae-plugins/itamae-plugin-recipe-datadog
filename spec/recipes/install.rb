@@ -1,3 +1,11 @@
+if ENV["DATADOG_UPGRADE"]
+  node[:datadog][:upgrade] = ENV["DATADOG_UPGRADE"] == "true"
+end
+
+if ENV["DD_API_KEY"]
+  node[:datadog][:api_key] = ENV["DD_API_KEY"]
+end
+
 case node[:platform]
 when "debian", "ubuntu"
   execute "apt-get update"
