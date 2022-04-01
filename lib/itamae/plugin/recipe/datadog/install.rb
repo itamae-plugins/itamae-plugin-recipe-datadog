@@ -1,7 +1,10 @@
+include_recipe "datadog::install_datadog_agent_integration"
+
 node.reverse_merge!(
   datadog: {
     install_only: true,
     upgrade: false,
+    integration: {},
   }
 )
 
@@ -35,5 +38,11 @@ execute 'install datadog-agent' do
   # If upgrade is disabled, run `install_script.sh` only when datadog isn't installed
   unless node[:datadog][:upgrade]
     not_if 'ls /etc/datadog-agent/datadog.yaml'
+  end
+end
+
+node[:datadog][:integrations].each do |integration_name, integration_version|
+  install_datadog_agent_integration integration_name do
+    version integration_version
   end
 end
