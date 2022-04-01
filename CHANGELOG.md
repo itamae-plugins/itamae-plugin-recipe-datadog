@@ -1,5 +1,15 @@
 ## Unreleased
-[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.2...master)
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.0...master)
+
+## v0.3.0
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.2...v0.3.0)
+
+* Add `node[:datadog][:agent_major_version]`
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/22
+* Add `node[:datadog][:integrations]` and `install_datadog_agent_integration`
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/23
+* Support Ubuntu Focal
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/24
 
 ## v0.2.2
 [full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.1...v0.2.2)
