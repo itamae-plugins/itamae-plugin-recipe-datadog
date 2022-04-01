@@ -1,5 +1,15 @@
 ## Unreleased
-[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.1...master)
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.2...master)
+
+## v0.2.2
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.1...v0.2.2)
+
+* Transferred to itamae-plugins org
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/11
+* Setup CI. Install wget if not installed. Add itamae to runtime dependency
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/12
+* Add `spec.metadata`
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/13
 
 ## v0.2.1
 [full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.0...v0.2.1)
