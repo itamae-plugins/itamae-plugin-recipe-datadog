@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.0...master)
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.1...master)
+
+## v0.3.1
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.0...v0.3.1)
+
+* Support mitamae
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/25
 
 ## v0.3.0
 [full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.2.2...v0.3.0)
