@@ -1,6 +1,6 @@
 # Itamae::Plugin::Recipe::Datadog
 
-[Itamae](https://github.com/itamae-kitchen/itamae) plugin to install Datadog Agent.
+[Itamae](https://github.com/itamae-kitchen/itamae) plugin to install [Datadog Agent](https://docs.datadoghq.com/agent/).
 
 [![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-datadog.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-datadog)
 [![test](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/actions/workflows/test.yml/badge.svg)](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/actions/workflows/test.yml)
