@@ -5,7 +5,7 @@ require "itamae"
 
 set :backend, :docker
 
-set :docker_image, ENV['DOCKER_IMAGE']
+set :docker_image, ENV['TEST_IMAGE']
 set :docker_container, ENV['DOCKER_CONTAINER']
 
 # Disable sudo

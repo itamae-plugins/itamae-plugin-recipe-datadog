@@ -3,12 +3,12 @@ require "rspec/core/rake_task"
 
 RSpec::Core::RakeTask.new(:serverspec)
 
-ENV["DOCKER_IMAGE"] = "itamae-plugin:latest"
-ENV["IMAGE"] ||= "debian:buster"
+ENV["TEST_IMAGE"] = "itamae-plugin:latest"
+ENV["SOURCE_IMAGE"] ||= "debian:buster"
 
 desc "Run itamae"
 task :itamae do
-  sh "itamae docker --node-yaml=spec/recipes/node.yml spec/recipes/install.rb --image=#{ENV["IMAGE"]} --tag #{ENV["DOCKER_IMAGE"]}"
+  sh "itamae docker --node-yaml=spec/recipes/node.yml spec/recipes/install.rb --image=#{ENV["SOURCE_IMAGE"]} --tag #{ENV["TEST_IMAGE"]}"
 end
 
 desc "Run test"

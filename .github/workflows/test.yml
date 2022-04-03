@@ -55,26 +55,26 @@ jobs:
       - name: Run test (1st installation)
         run: bundle exec rake test
         env:
-          IMAGE: ${{ matrix.image }}
+          SOURCE_IMAGE: ${{ matrix.image }}
 
       - name: Run test (installation is skipped)
         run: bundle exec rake test
         env:
-          IMAGE: itamae-plugin:latest
+          SOURCE_IMAGE: itamae-plugin:latest
           DATADOG_UPGRADE: "false"
           DD_API_KEY: api_key_2
 
       - name: Run test (datadog-agent is upgraded)
         run: bundle exec rake test
         env:
-          IMAGE: itamae-plugin:latest
+          SOURCE_IMAGE: itamae-plugin:latest
           DATADOG_UPGRADE: "true"
           DD_API_KEY: api_key_3
 
       - name: Run test (DD_AGENT_MAJOR_VERSION is specified)
         run: bundle exec rake test
         env:
-          IMAGE: ${{ matrix.image }}
+          SOURCE_IMAGE: ${{ matrix.image }}
           DD_AGENT_MAJOR_VERSION: 7
 
       - name: Slack Notification (not success)
