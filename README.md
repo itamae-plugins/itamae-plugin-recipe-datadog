@@ -63,7 +63,7 @@ datadog:
 
 ## Definitions
 ### install_datadog_agent_integration
-Install datadog-agent integration
+Install datadog-agent integration. (same to `node[:datadog][:integrations]`)
 
 Usage
 
