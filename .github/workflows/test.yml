@@ -27,6 +27,7 @@ jobs:
           - debian:bullseye
           - amazonlinux:2
           - ubuntu:focal
+          - ubuntu:jammy
 
     steps:
       - uses: actions/checkout@v2
