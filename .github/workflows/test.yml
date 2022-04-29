@@ -24,6 +24,7 @@ jobs:
           - 2.3
         image:
           - debian:buster
+          - debian:bullseye
           - amazonlinux:2
           - ubuntu:focal
 
