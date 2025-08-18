@@ -22,6 +22,8 @@ jobs:
           - 2.3
         image:
           - debian:bullseye
+          - debian:bookworm
+          - debian:trixie
           - amazonlinux:2
           - ubuntu:focal
           - ubuntu:jammy
