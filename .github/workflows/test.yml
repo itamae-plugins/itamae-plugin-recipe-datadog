@@ -21,14 +21,15 @@ jobs:
         ruby:
           - 2.3
         image:
-          - debian:buster
           - debian:bullseye
+          - debian:bookworm
+          - debian:trixie
           - amazonlinux:2
           - ubuntu:focal
           - ubuntu:jammy
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: ruby/setup-ruby@v1
         with:
