@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.1...master)
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.2...master)
+
+## [v0.3.2](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/releases/tag/v0.3.2)
+[full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.1...v0.3.2)
+
+* Release gem from GitHub Actions
+  * https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/pull/37
 
 ## v0.3.1
 [full changelog](https://github.com/itamae-plugins/itamae-plugin-recipe-datadog/compare/v0.3.0...v0.3.1)
