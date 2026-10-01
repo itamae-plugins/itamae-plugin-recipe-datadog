@@ -21,7 +21,6 @@ jobs:
         ruby:
           - 2.3
         image:
-          - debian:bullseye
           - debian:bookworm
           - debian:trixie
           - amazonlinux:2
